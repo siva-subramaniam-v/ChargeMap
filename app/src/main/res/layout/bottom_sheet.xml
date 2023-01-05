@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="station"
+            type="com.example.chargemap.domain.Station" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:behavior_hideable="true"
+        android:background="@color/bottom_sheet_background"
+        app:behavior_peekHeight="180dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/station_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/list_item_station"
+            android:orientation="horizontal"
+            android:layout_marginEnd="5dp"/>
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/iv_bottom_sheet_handle"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:src="@drawable/bottom_sheet_handler"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/station_list"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/station_list"-->
+        <!--            app:layout_constraintTop_toTopOf="@id/station_list" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

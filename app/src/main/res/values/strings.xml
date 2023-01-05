@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Charge Map</string>
+    <string name="ok">OK</string>
+    <string name="usage_cost">%1$.1f km</string>
+</resources>
